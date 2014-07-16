@@ -1,6 +1,6 @@
 SHD201407-app
 =============
-
+[使用Spring4的JavaConfig整合Druid Hibernate4.3](https://github.com/alibaba/druid/wiki/%E4%BD%BF%E7%94%A8Spring4%E7%9A%84JavaConfig%E6%95%B4%E5%90%88Druid-Hibernate4.3)
 2014-07 
 <pre>
   1 基于maven的项目，整合内容spring4.0.3+hibernate4.3.5+jpa2.1+druid1.0.6+JDK8编写
