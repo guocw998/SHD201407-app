@@ -1,0 +1,61 @@
+
+#MYSQL
+hibernate.dialect=org.hibernate.dialect.MySQLInnoDBDialect
+
+hibernate.connection.url=jdbc:mysql://localhost:3306/superweb?useUnicode=true&characterEncoding=utf-8
+hibernate.connection.driver_class=com.mysql.jdbc.Driver
+hibernate.connection.username=root
+hibernate.connection.password=
+
+#c3p0
+#hibernate.connection.provider_class=org.hibernate.connection.C3P0ConnectionProvider
+
+#Druid::注意这里配置的ConnectionProvider！！！ 第一次，配置错误了导致直接加不成功的异常！！
+#hibernate.connection.provider_class=com.alibaba.druid.support.hibernate.DruidConnectionProvider
+hibernate.connection.provider_class=com.urely.sh2014.DruidConnectionProvider
+
+#####################################
+#设置外连接抓取树的最大深度
+hibernate.max_fetch_depth=3
+#设定JDBC的Statement读取数据的时候每次从数据库中取出的记录条数。
+hibernate.jdbc.fetch_size=50
+
+hibernate.jdbc.batch_size=50
+#自动建表类型 validate|create|create-drop|update
+hibernate.hbm2ddl.auto=create-drop
+#是否显示SQL 
+hibernate.show_sql=true
+#显示SQL是否格式化
+hibernate.format_sql=true
+#关闭二级缓存
+hibernate.cache.provider_class=org.hibernate.cache.NoCacheProvider
+
+#关闭实体字段映射校验
+#javax.persistence.validation.mode
+
+#@see org.hibernate.cfg.Environment
+#property	meaning
+#hibernate.dialect	classname of org.hibernate.dialect.Dialect subclass
+#hibernate.connection.provider_class	classname of ConnectionProvider subclass (if not specified hueristics are used)
+#hibernate.connection.username	database username
+#hibernate.connection.password	database password
+#hibernate.connection.url	JDBC URL (when using java.sql.DriverManager)
+#hibernate.connection.driver_class	classname of JDBC driver
+#hibernate.connection.isolation	JDBC transaction isolation level (only when using java.sql.DriverManager)
+#hibernate.connection.pool_size	the maximum size of the connection pool (only when using java.sql.DriverManager)
+#hibernate.connection.datasource	databasource JNDI name (when using javax.sql.Datasource)
+#hibernate.jndi.url	JNDI InitialContext URL
+#hibernate.jndi.class	JNDI InitialContext classname
+
+#hibernate.max_fetch_depth	maximum depth of outer join fetching
+#hibernate.jdbc.batch_size	enable use of JDBC2 batch API for drivers which support it
+#hibernate.jdbc.fetch_size	set the JDBC fetch size
+#hibernate.jdbc.use_scrollable_resultset	enable use of JDBC2 scrollable resultsets (you only need this specify this property when using user supplied connections)
+#hibernate.jdbc.use_getGeneratedKeys	enable use of JDBC3 PreparedStatement.getGeneratedKeys() to retrieve natively generated keys after insert. Requires JDBC3+ driver and JRE1.4+
+#hibernate.hbm2ddl.auto	enable auto DDL export
+#hibernate.default_schema	use given schema name for unqualified tables (always optional)
+#hibernate.default_catalog	use given catalog name for unqualified tables (always optional)
+#hibernate.session_factory_name	If set, the factory attempts to bind this name to itself in the JNDI context. This name is also used to support cross JVM Session (de)serialization.
+#hibernate.transaction.jta.platform	classname of org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform implementor
+#hibernate.transaction.factory_class	the factory to use for instantiating Transactions. (Defaults to JdbcTransactionFactory.)
+#hibernate.query.substitutions	query language token substitutions
